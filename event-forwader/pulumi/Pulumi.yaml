@@ -1,0 +1,7 @@
+name: event-forwarder
+runtime: nodejs
+description: A project that forwards event grid notifications to a notification service based on configuration.
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: azure-typescript

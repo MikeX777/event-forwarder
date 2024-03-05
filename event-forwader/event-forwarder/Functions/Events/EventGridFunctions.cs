@@ -23,6 +23,7 @@ namespace event_forwarder.Functions.Events
             [ServiceBus("%ServiceBusConfiguration:BroadcastQueueName%", Connection = "ServiceBusConfiguration")] IAsyncCollector<ServiceBusMessage> collector)
         {
             var serviceBusMessage = new ServiceBusMessage(eventGridEvent.ToString());
+            await collector.AddAsync(serviceBusMessage);
         }
 
 
